@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Incident List</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-DmY9l76VHVgB1vDkWEMWO9KkNQer2xG6Om8DbGgDkFnm3gVrBvify4jWY8U9iJ4W" crossorigin="anonymous">
+ <style>
+/* Define primary color */
+:root {
+  --primary-color: #3f51b5;
+}
+
+/* Body styles */
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Header styles */
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Incident card styles */
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.card h5 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.card p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.card img {
+  border-radius: 5px 5px 0 0;
+}
+
+/* Incident form styles */
+.form {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  width: 90%;
+  max-width: 500px;
+  padding: 10px;
+}
+
+.form input[type="text"],
+.form textarea {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.form input[type="submit"] {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+ </style>
+
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">SafeZone</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="post.html">Report Incident</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Incident List -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h1>Incidents</h1>
+        <div id="incident-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+          crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/esm/popper-lite">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZEENwI+Mk7BUvho1YkuzBh"
+          crossorigin="anonymous"></script>
+  <script src="/www/js/incidentlist.js"></script>
+</body>
+</html>
